@@ -1,277 +1,559 @@
 <!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5. -->
 <html lang="pt-BR">
+  <!-- Define o idioma principal do documento como Português do Brasil. -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Seção de cabeçalho do documento, contendo metadados e links para recursos externos. -->
+    <meta charset="UTF-8" />
+    <!-- Define a codificação de caracteres para UTF-8, essencial para exibir corretamente caracteres especiais. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura a viewport para garantir que a página seja responsiva em diferentes dispositivos. -->
     <title>Essência Gourmet - Menu</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
+    <!-- Define o título da página que aparece na aba do navegador. -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Linka o arquivo CSS principal para estilização da página. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Linka a biblioteca Font Awesome para ícones, via CDN (Content Delivery Network). -->
+  </head>
 
-<body>
+  <body>
+    <!-- Corpo do documento, onde todo o conteúdo visível da página é colocado. -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="imagens/logo_essencia_gourmet_sem_fundo_reta.jpg" alt="">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="galeria.html">Galeria</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="reservas.html" class="btn-destaque">Reservas</a></li>
-                </ul>
-            </nav>
-            <div class="menu-mobile">
-                <span>&#9776;</span>
-            </div>
+      <!-- Seção de cabeçalho principal do site, geralmente contendo o logotipo e a navegação. -->
+      <div class="container">
+        <!-- Contêiner para centralizar e limitar a largura do conteúdo do cabeçalho. -->
+        <div class="logo">
+          <!-- Div para o logotipo do site. -->
+          <img src="imagens/logo_essencia_gourmet_sem_fundo_reta.jpg" alt="" />
+          <!-- Imagem do logotipo da empresa. -->
         </div>
+        <nav>
+          <!-- Seção de navegação principal do site. -->
+          <ul>
+            <!-- Lista não ordenada para os itens do menu de navegação. -->
+            <li><a href="index.html">Home</a></li>
+            <!-- Item de menu para a página inicial. -->
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <!-- Item de menu para a página de menu, com classe 'active' para indicar a página atual. -->
+            <li><a href="sobre.html">Sobre</a></li>
+            <!-- Item de menu para a página 'Sobre'. -->
+            <li><a href="galeria.html">Galeria</a></li>
+            <!-- Item de menu para a página de galeria. -->
+            <li><a href="contato.html">Contato</a></li>
+            <!-- Item de menu para a página de contato. -->
+            <li><a href="reservas.html" class="btn-destaque">Reservas</a></li>
+            <!-- Item de menu para a página de reservas, estilizado como um botão de destaque. -->
+          </ul>
+        </nav>
+        <!-- Fim da navegação principal. -->
+        <div class="menu-mobile">
+          <!-- Div para o ícone do menu mobile (hambúrguer), visível em telas menores. -->
+          <span>&#9776;</span>
+          <!-- Caractere Unicode para o ícone de hambúrguer. -->
+        </div>
+      </div>
     </header>
 
-    <section class="banner"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/banners/menu-banner.jpg');">
-        <div class="container">
-            <div class="banner-content">
-                <h2>Nosso Menu</h2>
-                <p>Descubra uma experiência gastronômica única com nossos pratos exclusivos</p>
-            </div>
+    <section
+      class="banner"
+      style="
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/banners/menu-banner.jpg');
+      ">
+      <!-- Seção de banner, com imagem de fundo e um gradiente escuro para melhorar a legibilidade do texto. -->
+      <div class="container">
+        <!-- Contêiner para centralizar o conteúdo do banner. -->
+        <div class="banner-content">
+          <!-- Conteúdo textual dentro do banner. -->
+          <h2>Nosso Menu</h2>
+          <!-- Título principal do banner. -->
+          <p>
+            Descubra uma experiência gastronômica única com nossos pratos
+            exclusivos
+          </p>
+          <!-- Parágrafo descritivo do banner. -->
         </div>
+      </div>
     </section>
 
     <section class="menu-page">
-        <div class="container">
-            <h2 class="section-title">Cardápio Completo</h2>
+      <!-- Seção principal da página de menu. -->
+      <div class="container">
+        <!-- Contêiner para centralizar o conteúdo do menu. -->
+        <h2 class="section-title">Cardápio Completo</h2>
+        <!-- Título da seção do cardápio. -->
 
-            <div class="menu-categories">
-                <button class="category-btn active" data-filter="todos">Todos</button>
-                <button class="category-btn" data-filter="entradas">Entradas</button>
-                <button class="category-btn" data-filter="principais">Pratos Principais</button>
-                <button class="category-btn" data-filter="sobremesas">Sobremesas</button>
-                <button class="category-btn" data-filter="bebidas">Bebidas</button>
-            </div>
-
-            <div class="menu-list">
-                <!-- Entradas -->
-                <div class="menu-category" data-category="entradas">
-                    <h3>Entradas</h3>
-                    <div class="menu-category-items">
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/canapesGourmet.jpg" alt="Canapés Gourmet">
-                            <div class="menu-item-info">
-                                <h4>Canapés Gourmet</h4>
-                                <p>Variedade de canapés com ingredientes selecionados e apresentação elegante.</p>
-                                <p class="price">R$ 45,00 (10 unidades)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/bruschettaItaliana.jpg" alt="Bruschetta Italiana">
-                            <div class="menu-item-info">
-                                <h4>Bruschetta Italiana</h4>
-                                <p>Pão italiano tostado com tomate, manjericão, alho e azeite extra virgem.</p>
-                                <p class="price">R$ 38,00 (8 unidades)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/carpaccioDeFileMignon.jpg" alt="Carpaccio de Filé Mignon">
-                            <div class="menu-item-info">
-                                <h4>Carpaccio de Filé Mignon</h4>
-                                <p>Finas fatias de filé mignon com alcaparras, parmesão e molho de mostarda e mel.</p>
-                                <p class="price">R$ 52,00</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/tabuaDeFrios.jpg" alt="Tábua de Queijos e Frios">
-                            <div class="menu-item-info">
-                                <h4>Tábua de Queijos e Frios</h4>
-                                <p>Seleção de queijos finos, embutidos e acompanhamentos.</p>
-                                <p class="price">R$ 75,00 (para 4 pessoas)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pratos Principais -->
-                <div class="menu-category" data-category="principais">
-                    <h3>Pratos Principais</h3>
-                    <div class="menu-category-items">
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/bife-ao-molho-madeira.jpg"
-                                alt="Filé Mignon ao Molho Madeira">
-                            <div class="menu-item-info">
-                                <h4>Filé Mignon ao Molho Madeira</h4>
-                                <p>Medalhões de filé mignon grelhados, acompanhados de molho madeira e risoto de funghi.
-                                </p>
-                                <p class="price">R$ 68,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/Salmao-Grelhado.jpg" alt="Salmão Grelhado">
-                            <div class="menu-item-info">
-                                <h4>Salmão Grelhado</h4>
-                                <p>Filé de salmão grelhado com ervas finas, acompanhado de legumes salteados e purê de
-                                    batata.</p>
-                                <p class="price">R$ 62,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/Risoto-de-camarao.jpg" alt="Risoto de Camarão">
-                            <div class="menu-item-info">
-                                <h4>Risoto de Camarão</h4>
-                                <p>Arroz arbóreo cremoso com camarões, tomate, ervas e finalizado com parmesão.</p>
-                                <p class="price">R$ 58,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/Ratatouille.jpg" alt="Ratatouille Vegetariano">
-                            <div class="menu-item-info">
-                                <h4>Ratatouille</h4>
-                                <p>Clássico prato francês com legumes assados, ervas provençais e molho de tomate.</p>
-                                <p class="price">R$ 48,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sobremesas -->
-                <div class="menu-category" data-category="sobremesas">
-                    <h3>Sobremesas</h3>
-                    <div class="menu-category-items">
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/petit-Gateau.jpg" alt="Petit Gateau">
-                            <div class="menu-item-info">
-                                <h4>Petit Gateau</h4>
-                                <p>Bolo quente de chocolate com centro derretido, acompanhado de sorvete de creme.</p>
-                                <p class="price">R$ 28,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/cheesecake-de-frutas-vermelhas.jpg"
-                                alt="Cheesecake de Frutas Vermelhas">
-                            <div class="menu-item-info">
-                                <h4>Cheesecake de Frutas Vermelhas</h4>
-                                <p>Torta cremosa de cream cheese com calda de frutas vermelhas.</p>
-                                <p class="price">R$ 25,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/Tiramisu.jpg" alt="Tiramisu">
-                            <div class="menu-item-info">
-                                <h4>Tiramisu</h4>
-                                <p>Clássica sobremesa italiana com biscoitos champagne, café, mascarpone e cacau.</p>
-                                <p class="price">R$ 26,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/frutas-flambadas-com-sorvete.jpg" alt="Frutas Flambadas">
-                            <div class="menu-item-info">
-                                <h4>Frutas Flambadas</h4>
-                                <p>Mix de frutas da estação flambadas com licor e servidas com sorvete.</p>
-                                <p class="price">R$ 30,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bebidas -->
-                <div class="menu-category" data-category="bebidas">
-                    <h3>Bebidas</h3>
-                    <div class="menu-category-items">
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/cartada-de-vinhos.jpg" alt="Carta de Vinhos">
-                            <div class="menu-item-info">
-                                <h4>Carta de Vinhos</h4>
-                                <p>Seleção de vinhos nacionais e importados para harmonizar com seu menu.</p>
-                                <p class="price">A partir de R$ 90,00</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/coqueteis-exclusivos.jpg" alt="Coquetéis Exclusivos">
-                            <div class="menu-item-info">
-                                <h4>Coquetéis Exclusivos</h4>
-                                <p>Drinks especiais preparados por nossos bartenders para seu evento.</p>
-                                <p class="price">A partir de R$ 25,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/Sucos-Naturais.jpg" alt="Sucos Naturais">
-                            <div class="menu-item-info">
-                                <h4>Sucos Naturais</h4>
-                                <p>Variedade de sucos de frutas frescas, com ou sem açúcar.</p>
-                                <p class="price">R$ 15,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                        <div class="menu-category-item">
-                            <img src="imagens/menu-imagens/cafe.jpg" alt="Café Gourmet">
-                            <div class="menu-item-info">
-                                <h4>Café</h4>
-                                <p>Estação de café com grãos selecionados e opções de finalização.</p>
-                                <p class="price">R$ 12,00 (por pessoa)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-info">
-                <h3>Informações Importantes</h3>
-                <ul>
-                    <li>Os preços são por pessoa e podem variar de acordo com o número de convidados.</li>
-                    <li>Oferecemos opções vegetarianas, veganas e para restrições alimentares.</li>
-                    <li>Cardápios personalizados podem ser elaborados mediante consulta.</li>
-                    <li>Para eventos completos, solicite um orçamento personalizado.</li>
-                </ul>
-            </div>
-
-            <div class="center">
-                <a href="reservas.html" class="btn">Solicitar Orçamento</a>
-            </div>
+        <div class="menu-categories">
+          <!-- Contêiner para os botões de filtro de categoria do menu. -->
+          <button class="category-btn active" data-filter="todos">Todos</button>
+          <!-- Botão de filtro para exibir todas as categorias, ativo por padrão. -->
+          <button class="category-btn" data-filter="entradas">Entradas</button>
+          <!-- Botão de filtro para a categoria 'Entradas'. -->
+          <button class="category-btn" data-filter="principais">
+            Pratos Principais
+          </button>
+          <!-- Botão de filtro para a categoria 'Pratos Principais'. -->
+          <button class="category-btn" data-filter="sobremesas">
+            Sobremesas
+          </button>
+          <!-- Botão de filtro para a categoria 'Sobremesas'. -->
+          <button class="category-btn" data-filter="bebidas">Bebidas</button>
+          <!-- Botão de filtro para a categoria 'Bebidas'. -->
         </div>
+
+        <div class="menu-list">
+          <!-- Contêiner para a lista de itens do menu, agrupados por categoria. -->
+          <!-- Entradas -->
+          <div class="menu-category" data-category="entradas">
+            <!-- Categoria de menu: Entradas. -->
+            <h3>Entradas</h3>
+            <!-- Título da categoria. -->
+            <div class="menu-category-items">
+              <!-- Contêiner para os itens dentro da categoria 'Entradas'. -->
+              <div class="menu-category-item">
+                <!-- Item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/canapesGourmet.jpg"
+                  alt="Canapés Gourmet" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Canapés Gourmet</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Variedade de canapés com ingredientes selecionados e
+                    apresentação elegante.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 45,00 (10 unidades)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Segundo item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/bruschettaItaliana.jpg"
+                  alt="Bruschetta Italiana" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Bruschetta Italiana</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Pão italiano tostado com tomate, manjericão, alho e azeite
+                    extra virgem.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 38,00 (8 unidades)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Terceiro item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/carpaccioDeFileMignon.jpg"
+                  alt="Carpaccio de Filé Mignon" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Carpaccio de Filé Mignon</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Finas fatias de filé mignon com alcaparras, parmesão e molho
+                    de mostarda e mel.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 52,00</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Quarto item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/tabuaDeFrios.jpg"
+                  alt="Tábua de Queijos e Frios" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Tábua de Queijos e Frios</h4>
+                  <!-- Nome do prato. -->
+                  <p>Seleção de queijos finos, embutidos e acompanhamentos.</p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 75,00 (para 4 pessoas)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pratos Principais -->
+          <div class="menu-category" data-category="principais">
+            <!-- Categoria de menu: Pratos Principais. -->
+            <h3>Pratos Principais</h3>
+            <!-- Título da categoria. -->
+            <div class="menu-category-items">
+              <!-- Contêiner para os itens dentro da categoria 'Pratos Principais'. -->
+              <div class="menu-category-item">
+                <!-- Item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/bife-ao-molho-madeira.jpg"
+                  alt="Filé Mignon ao Molho Madeira" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Filé Mignon ao Molho Madeira</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Medalhões de filé mignon grelhados, acompanhados de molho
+                    madeira e risoto de funghi.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 68,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Segundo item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/Salmao-Grelhado.jpg"
+                  alt="Salmão Grelhado" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Salmão Grelhado</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Filé de salmão grelhado com ervas finas, acompanhado de
+                    legumes salteados e purê de batata.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 62,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Terceiro item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/Risoto-de-camarao.jpg"
+                  alt="Risoto de Camarão" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Risoto de Camarão</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Arroz arbóreo cremoso com camarões, tomate, ervas e
+                    finalizado com parmesão.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 58,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Quarto item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/Ratatouille.jpg"
+                  alt="Ratatouille Vegetariano" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Ratatouille</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Clássico prato francês com legumes assados, ervas provençais
+                    e molho de tomate.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 48,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sobremesas -->
+          <div class="menu-category" data-category="sobremesas">
+            <!-- Categoria de menu: Sobremesas. -->
+            <h3>Sobremesas</h3>
+            <!-- Título da categoria. -->
+            <div class="menu-category-items">
+              <!-- Contêiner para os itens dentro da categoria 'Sobremesas'. -->
+              <div class="menu-category-item">
+                <!-- Item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/petit-Gateau.jpg"
+                  alt="Petit Gateau" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Petit Gateau</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Bolo quente de chocolate com centro derretido, acompanhado
+                    de sorvete de creme.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 28,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Segundo item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/cheesecake-de-frutas-vermelhas.jpg"
+                  alt="Cheesecake de Frutas Vermelhas" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Cheesecake de Frutas Vermelhas</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Torta cremosa de cream cheese com calda de frutas vermelhas.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 25,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Terceiro item individual do menu. -->
+                <img src="imagens/menu-imagens/Tiramisu.jpg" alt="Tiramisu" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Tiramisu</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Clássica sobremesa italiana com biscoitos champagne, café,
+                    mascarpone e cacau.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 26,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Quarto item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/frutas-flambadas-com-sorvete.jpg"
+                  alt="Frutas Flambadas" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Frutas Flambadas</h4>
+                  <!-- Nome do prato. -->
+                  <p>
+                    Mix de frutas da estação flambadas com licor e servidas com
+                    sorvete.
+                  </p>
+                  <!-- Descrição do prato. -->
+                  <p class="price">R$ 30,00 (por pessoa)</p>
+                  <!-- Preço do prato. -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebidas -->
+          <div class="menu-category" data-category="bebidas">
+            <!-- Categoria de menu: Bebidas. -->
+            <h3>Bebidas</h3>
+            <!-- Título da categoria. -->
+            <div class="menu-category-items">
+              <!-- Contêiner para os itens dentro da categoria 'Bebidas'. -->
+              <div class="menu-category-item">
+                <!-- Item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/cartada-de-vinhos.jpg"
+                  alt="Carta de Vinhos" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Carta de Vinhos</h4>
+                  <!-- Nome do item. -->
+                  <p>
+                    Seleção de vinhos nacionais e importados para harmonizar com
+                    seu menu.
+                  </p>
+                  <!-- Descrição do item. -->
+                  <p class="price">A partir de R$ 90,00</p>
+                  <!-- Preço do item. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Segundo item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/coqueteis-exclusivos.jpg"
+                  alt="Coquetéis Exclusivos" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Coquetéis Exclusivos</h4>
+                  <!-- Nome do item. -->
+                  <p>
+                    Drinks especiais preparados por nossos bartenders para seu
+                    evento.
+                  </p>
+                  <!-- Descrição do item. -->
+                  <p class="price">A partir de R$ 25,00 (por pessoa)</p>
+                  <!-- Preço do item. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Terceiro item individual do menu. -->
+                <img
+                  src="imagens/menu-imagens/Sucos-Naturais.jpg"
+                  alt="Sucos Naturais" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Sucos Naturais</h4>
+                  <!-- Nome do item. -->
+                  <p>
+                    Variedade de sucos de frutas frescas, com ou sem açúcar.
+                  </p>
+                  <!-- Descrição do item. -->
+                  <p class="price">R$ 15,00 (por pessoa)</p>
+                  <!-- Preço do item. -->
+                </div>
+              </div>
+              <div class="menu-category-item">
+                <!-- Quarto item individual do menu. -->
+                <img src="imagens/menu-imagens/cafe.jpg" alt="Café Gourmet" />
+                <!-- Imagem do item. -->
+                <div class="menu-item-info">
+                  <!-- Informações do item. -->
+                  <h4>Café</h4>
+                  <!-- Nome do item. -->
+                  <p>
+                    Estação de café com grãos selecionados e opções de
+                    finalização.
+                  </p>
+                  <!-- Descrição do item. -->
+                  <p class="price">R$ 12,00 (por pessoa)</p>
+                  <!-- Preço do item. -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-info">
+          <!-- Seção de informações importantes sobre o menu. -->
+          <h3>Informações Importantes</h3>
+          <!-- Título da seção. -->
+          <ul>
+            <!-- Lista de informações. -->
+            <li>
+              Os preços são por pessoa e podem variar de acordo com o número de
+              convidados.
+            </li>
+            <!-- Informação sobre preços. -->
+            <li>
+              Oferecemos opções vegetarianas, veganas e para restrições
+              alimentares.
+            </li>
+            <!-- Informação sobre restrições alimentares. -->
+            <li>
+              Cardápios personalizados podem ser elaborados mediante consulta.
+            </li>
+            <!-- Informação sobre cardápios personalizados. -->
+            <li>
+              Para eventos completos, solicite um orçamento personalizado.
+            </li>
+            <!-- Chamada para ação para orçamento. -->
+          </ul>
+        </div>
+
+        <div class="center">
+          <!-- Div para centralizar o botão. -->
+          <a href="reservas.html" class="btn">Solicitar Orçamento</a>
+          <!-- Botão que leva à página de reservas. -->
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Essência Gourmet</h2>
-                    <p>Eventos inesquecíveis com sabor e elegância</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="reservas.html">Reservas</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <p>📞(11) 4002-8922</p>
-                    <p>✉️ contato@essenciagourmet.com.br</p>
-                    <p>📍 Av. Brig. Faria Lima, São Paulo - SP</p>
-                </div>
-                <div class="footer-social">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> </a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
-                    </div>
-                </div>
+      <!-- Seção de rodapé do site. -->
+      <div class="container">
+        <!-- Contêiner para centralizar o conteúdo do rodapé. -->
+        <div class="footer-content">
+          <!-- Contêiner para o conteúdo principal do rodapé, dividido em colunas. -->
+          <div class="footer-logo">
+            <!-- Div para o logotipo e slogan no rodapé. -->
+            <h2>Essência Gourmet</h2>
+            <!-- Título do site no rodapé. -->
+            <p>Eventos inesquecíveis com sabor e elegância</p>
+            <!-- Slogan da empresa. -->
+          </div>
+          <div class="footer-links">
+            <!-- Div para links rápidos no rodapé. -->
+            <h3>Links Rápidos</h3>
+            <!-- Título da seção de links. -->
+            <ul>
+              <!-- Lista de links de navegação. -->
+              <li><a href="index.html">Home</a></li>
+              <!-- Link para a página inicial. -->
+              <li><a href="menu.html">Menu</a></li>
+              <!-- Link para a página de menu. -->
+              <li><a href="sobre.html">Sobre</a></li>
+              <!-- Link para a página 'Sobre'. -->
+              <li><a href="galeria.html">Galeria</a></li>
+              <!-- Link para a página de galeria. -->
+              <li><a href="contato.html">Contato</a></li>
+              <!-- Link para a página de contato. -->
+              <li><a href="reservas.html">Reservas</a></li>
+              <!-- Link para a página de reservas. -->
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <!-- Div para informações de contato no rodapé. -->
+            <h3>Contato</h3>
+            <!-- Título da seção de contato. -->
+            <p>📞(11) 4002-8922</p>
+            <!-- Telefone de contato. -->
+            <p>✉️ contato@essenciagourmet.com.br</p>
+            <!-- Email de contato. -->
+            <p>📍 Av. Brig. Faria Lima, São Paulo - SP</p>
+            <!-- Endereço da empresa. -->
+          </div>
+          <div class="footer-social">
+            <!-- Div para ícones de redes sociais no rodapé. -->
+            <h3>Redes Sociais</h3>
+            <!-- Título da seção de redes sociais. -->
+            <div class="social-icons">
+              <!-- Contêiner para os ícones sociais. -->
+              <a href="https://facebook.com" target="_blank"
+                ><i class="fab fa-facebook-f"></i>
+              </a>
+              <!-- Ícone e link para o Facebook, abrindo em nova aba. -->
+              <a href="https://twitter.com" target="_blank"
+                ><i class="fab fa-x-twitter"></i>
+              </a>
+              <!-- Ícone e link para o X (antigo Twitter), abrindo em nova aba. -->
+              <a href="https://instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i>
+              </a>
+              <!-- Ícone e link para o Instagram, abrindo em nova aba. -->
+              <a href="https://linkedin.com" target="_blank"
+                ><i class="fab fa-linkedin-in"></i>
+              </a>
+              <!-- Ícone e link para o LinkedIn, abrindo em nova aba. -->
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Essência Gourmet. Todos os direitos reservados.</p>
-            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <!-- Seção inferior do rodapé, geralmente para direitos autorais. -->
+          <p>&copy; 2024 Essência Gourmet. Todos os direitos reservados.</p>
+          <!-- Texto de direitos autorais. -->
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
-
+    <!-- Linka o arquivo JavaScript principal para funcionalidades interativas da página. -->
+  </body>
 </html>
