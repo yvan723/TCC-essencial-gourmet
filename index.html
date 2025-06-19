@@ -1,36 +1,61 @@
 <!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5 -->
 <html lang="pt-BR">
+  <!-- Define o idioma do documento como Português do Brasil -->
   <head>
+    <!-- Início da seção de cabeçalho do documento, que contém metadados e links para recursos externos -->
     <meta charset="UTF-8" />
+    <!-- Define a codificação de caracteres para UTF-8, garantindo a exibição correta de caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura a viewport para garantir que a página seja responsiva em diferentes dispositivos -->
     <title>Essência Gourmet - Home</title>
+    <!-- Define o título da página que aparece na aba do navegador -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Linka o arquivo CSS principal para estilização da página -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Linka a biblioteca Font Awesome para ícones, via CDN -->
   </head>
 
   <body>
+    <!-- Início do corpo do documento, onde todo o conteúdo visível da página é colocado -->
     <header>
+      <!-- Início da seção de cabeçalho principal do site -->
       <div class="container">
+        <!-- Contêiner para centralizar e limitar a largura do conteúdo do cabeçalho -->
         <div class="logo">
+          <!-- Div para o logotipo do site -->
           <img src="imagens/logo_essencia_gourmet_sem_fundo_reta.jpg" alt="" />
+          <!-- Imagem do logotipo -->
         </div>
         <nav>
+          <!-- Início da navegação principal do site -->
           <ul>
+            <!-- Lista não ordenada para os itens do menu -->
             <li><a href="index.html" class="active">Home</a></li>
+            <!-- Item de menu para a página inicial, com classe 'active' para indicar a página atual -->
             <li><a href="menu.html">Menu</a></li>
+            <!-- Item de menu para a página de menu -->
             <li><a href="sobre.html">Sobre</a></li>
+            <!-- Item de menu para a página 'Sobre' -->
             <li><a href="galeria.html">Galeria</a></li>
+            <!-- Item de menu para a página de galeria -->
             <li><a href="contato.html">Contato</a></li>
+            <!-- Item de menu para a página de contato -->
             <li><a href="reservas.html" class="btn-destaque">Reservas</a></li>
+            <!-- Item de menu para a página de reservas, com um estilo de botão de destaque -->
           </ul>
         </nav>
+        <!-- Fim da navegação principal -->
         <div class="menu-mobile">
+          <!-- Div para o ícone do menu mobile (hambúrguer) -->
           <span>&#9776;</span>
+          <!-- Caractere Unicode para o ícone de hambúrguer -->
         </div>
       </div>
     </header>
+    <!-- Fim da seção de cabeçalho principal -->
 
     <section
       class="banner"
@@ -39,285 +64,441 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url('imagens/banners/inicio-banner.jpg');
+          url(\'imagens/banners/inicio-banner.jpg\');
       ">
+      <!-- Seção de banner principal, com imagem de fundo e gradiente escuro para melhor legibilidade do texto -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo do banner -->
         <div class="banner-content">
+          <!-- Conteúdo textual do banner -->
           <h2>Eventos Inesquecíveis com Sabor e Elegância</h2>
+          <!-- Título principal do banner -->
           <p>
             Transforme seu evento em uma experiência gastronômica única com o
             Essência Gourmet
           </p>
+          <!-- Parágrafo descritivo do banner -->
           <a href="reservas.html" class="btn">Solicitar Orçamento</a>
+          <!-- Botão de chamada para ação que leva à página de reservas -->
         </div>
       </div>
     </section>
+    <!-- Fim da seção de banner -->
 
     <section class="destaques">
+      <!-- Seção de destaques, apresentando os serviços principais -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo dos destaques -->
         <h2 class="section-title">Nossos Serviços</h2>
+        <!-- Título da seção de serviços -->
         <div class="cards">
+          <!-- Contêiner para os cartões de serviço -->
           <div class="card">
+            <!-- Cartão individual de serviço -->
             <img src="imagens/inicio-imagens/casamentos.jpg" alt="Casamentos" />
+            <!-- Imagem do serviço de casamentos -->
             <h3>Casamentos</h3>
+            <!-- Título do serviço -->
             <p>
               Tornamos o dia mais importante da sua vida ainda mais especial com
               um serviço impecável e cardápio personalizado.
             </p>
+            <!-- Descrição do serviço -->
           </div>
           <div class="card">
+            <!-- Segundo cartão de serviço -->
             <img
               src="imagens/inicio-imagens/corporativo.jpg"
               alt="Eventos Corporativos" />
+            <!-- Imagem do serviço de eventos corporativos -->
             <h3>Eventos Corporativos</h3>
+            <!-- Título do serviço -->
             <p>
               Impressione seus clientes e colaboradores com um buffet
               sofisticado para suas reuniões e confraternizações.
             </p>
+            <!-- Descrição do serviço -->
           </div>
           <div class="card">
+            <!-- Terceiro cartão de serviço -->
             <img
               src="imagens/inicio-imagens/aniversarios.jpg"
               alt="Aniversários" />
+            <!-- Imagem do serviço de aniversários -->
             <h3>Aniversários</h3>
+            <!-- Título do serviço -->
             <p>
               Comemore seu aniversário com um menu exclusivo e um atendimento
               que vai surpreender você e seus convidados.
             </p>
+            <!-- Descrição do serviço -->
           </div>
         </div>
       </div>
     </section>
+    <!-- Fim da seção de destaques -->
 
     <section class="sobre-home">
+      <!-- Seção 'Sobre' na página inicial -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo da seção 'Sobre' -->
         <h2 class="section-title">Sobre o Essência Gourmet</h2>
+        <!-- Título da seção -->
         <div class="sobre-content">
+          <!-- Contêiner para o conteúdo textual e a imagem da seção 'Sobre' -->
           <div class="sobre-text">
+            <!-- Div para o texto da seção 'Sobre' -->
             <p>
               Fundado em 2010, o Essência Gourmet nasceu da paixão pela
               gastronomia e pelo desejo de proporcionar experiências memoráveis
               em eventos especiais.
             </p>
+            <!-- Primeiro parágrafo sobre a fundação -->
             <p>
               Nossa equipe é formada por profissionais experientes e apaixonados
               pela arte de servir bem, garantindo um serviço impecável do início
               ao fim do evento.
             </p>
+            <!-- Segundo parágrafo sobre a equipe -->
             <p>
               Utilizamos apenas ingredientes frescos e de alta qualidade,
               priorizando fornecedores locais e produtos sazonais para garantir
               o melhor sabor em cada prato.
             </p>
+            <!-- Terceiro parágrafo sobre ingredientes -->
             <a href="sobre.html" class="btn">Conheça Nossa História</a>
+            <!-- Botão que leva à página 'Sobre' completa -->
           </div>
           <div class="sobre-image">
+            <!-- Div para a imagem da seção 'Sobre' -->
             <img
               src="imagens/inicio-imagens/historia.jpg"
               alt="Nossa História" />
+            <!-- Imagem ilustrativa da história -->
           </div>
         </div>
       </div>
     </section>
+    <!-- Fim da seção 'Sobre' -->
     <section class="menu-preview">
+      <!-- Seção de pré-visualização do menu -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo da pré-visualização do menu -->
         <h2 class="section-title">Destaques do Menu</h2>
+        <!-- Título da seção -->
         <div class="menu-items">
+          <!-- Contêiner para os itens de destaque do menu -->
           <div class="menu-item">
+            <!-- Item individual de destaque do menu -->
             <img src="imagens/inicio-imagens/entradas.jpg" alt="Entradas" />
+            <!-- Imagem da categoria 'Entradas' -->
             <h3>Entradas</h3>
+            <!-- Título da categoria -->
             <p>
               Canapés gourmet, carpaccio de filé mignon, bruschetta italiana e
               outras opções para começar seu evento com elegância.
             </p>
+            <!-- Descrição da categoria -->
           </div>
           <div class="menu-item">
+            <!-- Segundo item de destaque do menu -->
             <img
               src="imagens/inicio-imagens/pratos-principais.jpg"
               alt="Pratos Principais" />
+            <!-- Imagem da categoria 'Pratos Principais' -->
             <h3>Pratos Principais</h3>
+            <!-- Título da categoria -->
             <p>
               Filé mignon ao molho madeira, salmão grelhado, risoto de camarão e
               outras delícias preparadas por nossos chefs.
             </p>
+            <!-- Descrição da categoria -->
           </div>
           <div class="menu-item">
+            <!-- Terceiro item de destaque do menu -->
             <img src="imagens/inicio-imagens/sobremesas.jpg" alt="Sobremesas" />
+            <!-- Imagem da categoria 'Sobremesas' -->
             <h3>Sobremesas</h3>
+            <!-- Título da categoria -->
             <p>
               Petit gateau, cheesecake de frutas vermelhas, tiramisu e outras
               sobremesas irresistíveis para finalizar com chave de ouro.
             </p>
+            <!-- Descrição da categoria -->
           </div>
           <div class="menu-item">
+            <!-- Quarto item de destaque do menu -->
             <img src="imagens/inicio-imagens/bebidas.jpg" alt="Bebidas" />
+            <!-- Imagem da categoria 'Bebidas' -->
             <h3>Bebidas</h3>
+            <!-- Título da categoria -->
             <p>
               Carta de vinhos selecionados, coquetéis exclusivos, sucos naturais
               e outras opções para acompanhar seu menu.
             </p>
+            <!-- Descrição da categoria -->
           </div>
         </div>
         <div class="center">
+          <!-- Div para centralizar o botão -->
           <a href="menu.html" class="btn">Ver Menu Completo</a>
+          <!-- Botão que leva à página de menu completo -->
         </div>
       </div>
     </section>
+    <!-- Fim da seção de pré-visualização do menu -->
     <section class="depoimentos">
+      <!-- Seção de depoimentos de clientes -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo dos depoimentos -->
         <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+        <!-- Título da seção -->
         <div class="depoimentos-slider">
+          <!-- Contêiner para o slider de depoimentos -->
           <div class="depoimento">
+            <!-- Primeiro depoimento individual -->
             <p>
               "O Essência Gourmet foi fundamental para o sucesso do nosso
               casamento. A comida estava divina e o serviço impecável. Todos os
               convidados elogiaram!"
             </p>
+            <!-- Texto do depoimento -->
             <div class="cliente">
+              <!-- Informações do cliente -->
               <h4>Jamson e Jose</h4>
+              <!-- Nome do cliente -->
               <p>Casamento - Maio 2024</p>
+              <!-- Evento e data -->
             </div>
           </div>
           <div class="depoimento" style="display: none">
+            <!-- Segundo depoimento, inicialmente oculto pelo estilo inline -->
             <p>
               "Contratamos para nosso evento corporativo anual e foi um sucesso
               absoluto. Profissionalismo, pontualidade e qualidade gastronômica
               de alto nível."
             </p>
+            <!-- Texto do depoimento -->
             <div class="cliente">
+              <!-- Informações do cliente -->
               <h4>Empresa Nexus</h4>
+              <!-- Nome do cliente -->
               <p>Evento Corporativo - Março 2024</p>
+              <!-- Evento e data -->
             </div>
           </div>
           <div class="depoimento" style="display: none">
+            <!-- Terceiro depoimento, inicialmente oculto pelo estilo inline -->
             <p>
               "Minha festa de 15 anos foi perfeita graças ao Essência Gourmet!
               Atenderam a todos os meus pedidos e criaram um menu personalizado
               incrível."
             </p>
+            <!-- Texto do depoimento -->
             <div class="cliente">
+              <!-- Informações do cliente -->
               <h4>Emerson</h4>
+              <!-- Nome do cliente -->
               <p>Aniversário de 15 anos - Abril 2024</p>
+              <!-- Evento e data -->
             </div>
           </div>
           <div class="slider-controls">
+            <!-- Controles de navegação do slider -->
             <span class="prev">&#10094;</span>
+            <!-- Botão 'anterior' (seta para a esquerda) -->
             <span class="next">&#10095;</span>
+            <!-- Botão 'próximo' (seta para a direita) -->
           </div>
         </div>
       </div>
     </section>
+    <!-- Fim da seção de depoimentos -->
     <section class="contato-rapido">
+      <!-- Seção de contato rápido -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo de contato -->
         <h2 class="section-title">Entre em Contato</h2>
+        <!-- Título da seção -->
         <div class="contato-content">
+          <!-- Contêiner para as informações de contato e o formulário -->
           <div class="contato-info">
+            <!-- Div para as informações de contato (telefone, email, endereço) -->
             <div class="info-item">
+              <!-- Item individual de informação de contato -->
               <div class="icon">📞</div>
+              <!-- Ícone de telefone -->
               <div>
                 <h3>Telefone</h3>
+                <!-- Título da informação -->
                 <p>(11) 4002-8922</p>
+                <!-- Número de telefone principal -->
                 <p>(11) 98765-4321 (WhatsApp)</p>
+                <!-- Número de WhatsApp -->
               </div>
             </div>
             <div class="info-item">
+              <!-- Segundo item de informação de contato -->
               <div class="icon">✉️</div>
+              <!-- Ícone de email -->
               <div>
                 <h3>Email</h3>
+                <!-- Título da informação -->
                 <p>contato@essenciagourmet.com.br</p>
+                <!-- Email de contato geral -->
                 <p>eventos@essenciagourmet.com.br</p>
+                <!-- Email para eventos -->
               </div>
             </div>
             <div class="info-item">
+              <!-- Terceiro item de informação de contato -->
               <div class="icon">📍</div>
+              <!-- Ícone de localização -->
               <div>
                 <h3>Endereço</h3>
+                <!-- Título da informação -->
                 <p>Av. Brig. Faria Lima</p>
+                <!-- Primeira linha do endereço -->
                 <p>São Paulo - SP, 01310-100</p>
+                <!-- Segunda linha do endereço -->
               </div>
             </div>
             <div class="social-media">
+              <!-- Div para links de redes sociais -->
               <h3>Redes Sociais</h3>
+              <!-- Título das redes sociais -->
               <a href="#" class="social-icon">Facebook</a>
+              <!-- Link para Facebook -->
               <a href="#" class="social-icon">Instagram</a>
+              <!-- Link para Instagram -->
               <a href="#" class="social-icon">WhatsApp</a>
+              <!-- Link para WhatsApp -->
             </div>
           </div>
           <div class="contato-form">
+            <!-- Div para o formulário de contato -->
             <form id="contato-form">
+              <!-- Formulário de contato -->
               <div class="form-group">
+                <!-- Grupo de formulário para o campo Nome Completo -->
                 <label for="nome">Nome Completo*</label>
+                <!-- Rótulo para o campo de nome -->
                 <input type="text" id="nome" name="nome" required />
+                <!-- Campo de input para o nome, obrigatório -->
               </div>
               <div class="form-group">
+                <!-- Grupo de formulário para o campo Email -->
                 <label for="email">Email*</label>
+                <!-- Rótulo para o campo de email -->
                 <input type="email" id="email" name="email" required />
+                <!-- Campo de input para o email, tipo email e obrigatório -->
               </div>
               <div class="form-group">
+                <!-- Grupo de formulário para o campo Telefone -->
                 <label for="telefone">Telefone*</label>
+                <!-- Rótulo para o campo de telefone -->
                 <input type="tel" id="telefone" name="telefone" required />
+                <!-- Campo de input para o telefone, tipo tel e obrigatório -->
               </div>
               <div class="form-group">
+                <!-- Grupo de formulário para o campo Mensagem -->
                 <label for="mensagem">Mensagem*</label>
+                <!-- Rótulo para o campo de mensagem -->
                 <textarea
                   id="mensagem"
                   name="mensagem"
                   rows="5"
                   required></textarea>
+                <!-- Campo de textarea para a mensagem, com 5 linhas e obrigatório -->
               </div>
               <button type="submit" class="btn">Enviar Mensagem</button>
+              <!-- Botão de envio do formulário -->
             </form>
           </div>
         </div>
       </div>
     </section>
+    <!-- Fim da seção de contato rápido -->
     <footer>
+      <!-- Início da seção de rodapé do site -->
       <div class="container">
+        <!-- Contêiner para centralizar o conteúdo do rodapé -->
         <div class="footer-content">
+          <!-- Contêiner para o conteúdo principal do rodapé -->
           <div class="footer-logo">
+            <!-- Div para o logotipo no rodapé -->
             <h2>Essência Gourmet</h2>
+            <!-- Título do site no rodapé -->
             <p>Eventos inesquecíveis com sabor e elegância</p>
+            <!-- Slogan no rodapé -->
           </div>
           <div class="footer-links">
+            <!-- Div para links rápidos no rodapé -->
             <h3>Links Rápidos</h3>
+            <!-- Título dos links rápidos -->
             <ul>
+              <!-- Lista de links rápidos -->
               <li><a href="index.html">Home</a></li>
+              <!-- Link para Home -->
               <li><a href="menu.html">Menu</a></li>
+              <!-- Link para Menu -->
               <li><a href="sobre.html">Sobre</a></li>
+              <!-- Link para Sobre -->
               <li><a href="galeria.html">Galeria</a></li>
+              <!-- Link para Galeria -->
               <li><a href="contato.html">Contato</a></li>
+              <!-- Link para Contato -->
               <li><a href="reservas.html">Reservas</a></li>
+              <!-- Link para Reservas -->
             </ul>
           </div>
           <div class="footer-contact">
+            <!-- Div para informações de contato no rodapé -->
             <h3>Contato</h3>
+            <!-- Título do contato -->
             <p>📞 (11) 4002-8922</p>
+            <!-- Telefone -->
             <p>✉️ contato@essenciagourmet.com.br</p>
+            <!-- Email -->
             <p>📍 Av. Brig. Faria Lima, São Paulo - SP</p>
+            <!-- Endereço -->
           </div>
           <div class="footer-social">
+            <!-- Div para ícones de redes sociais no rodapé -->
             <h3>Redes Sociais</h3>
+            <!-- Título das redes sociais -->
             <div class="social-icons">
+              <!-- Contêiner para os ícones sociais -->
               <a href="https://facebook.com" target="_blank"
                 ><i class="fab fa-facebook-f"></i>
               </a>
+              <!-- Ícone e link para Facebook -->
               <a href="https://twitter.com" target="_blank"
                 ><i class="fab fa-x-twitter"></i>
               </a>
+              <!-- Ícone e link para X (Twitter) -->
               <a href="https://instagram.com" target="_blank"
                 ><i class="fab fa-instagram"></i>
               </a>
+              <!-- Ícone e link para Instagram -->
               <a href="https://linkedin.com" target="_blank"
                 ><i class="fab fa-linkedin-in"></i>
               </a>
+              <!-- Ícone e link para LinkedIn -->
             </div>
           </div>
         </div>
         <div class="footer-bottom">
+          <!-- Seção inferior do rodapé, para direitos autorais -->
           <p>&copy; 2024 Essência Gourmet. Todos os direitos reservados.</p>
+          <!-- Texto de direitos autorais -->
         </div>
       </div>
     </footer>
+    <!-- Fim da seção de rodapé -->
     <script src="js/script.js"></script>
+    <!-- Linka o arquivo JavaScript principal para funcionalidades interativas -->
   </body>
+  <!-- Fim do corpo do documento -->
 </html>
+<!-- Fim do documento HTML -->
