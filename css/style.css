@@ -1,400 +1,599 @@
 /* Estilos Gerais */
+/* Define estilos globais para todos os elementos */
 * {
+  /* Remove margens padrão */
   margin: 0;
+  /* Remove preenchimento padrão */
   padding: 0;
+  /* Inclui padding e borda no tamanho total do elemento */
   box-sizing: border-box;
+  /* Define a fonte */
   font-family: "Arial", sans-serif;
 }
 
 body {
+  /* Altura da linha */
   line-height: 1.6;
+  /* Cor do texto */
   color: #333;
+  /* Cor de fundo */
   background-color: #f9f9f9;
-  /* Impede seleção de texto em toda a página */
+  /* Impede seleção de texto */
   user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
+  /* user-select para Safari */
+  -webkit-user-select: none;
+  /* user-select para Firefox */
+  -moz-user-select: none;
+  /* user-select para IE/Edge */
+  -ms-user-select: none;
 }
 
 .container {
+  /* Largura do contêiner */
   width: 90%;
+  /* Largura máxima */
   max-width: 1200px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
+  /* Preenchimento horizontal */
   padding: 0 15px;
 }
 
 a {
+  /* Remove sublinhado */
   text-decoration: none;
+  /* Cor do link */
   color: #4a6741;
 }
 
 img {
+  /* Garante que a imagem não exceda a largura do contêiner */
   max-width: 100%;
+  /* Mantém a proporção */
   height: auto;
+  /* Exibe como bloco */
   display: block;
 }
 
 .btn {
+  /* Exibe como bloco em linha */
   display: inline-block;
+  /* Cor de fundo */
   background-color: #4a6741;
+  /* Cor do texto */
   color: white;
+  /* Preenchimento */
   padding: 10px 20px;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Transição suave para cor de fundo */
   transition: background-color 0.3s;
+  /* Remove borda */
   border: none;
+  /* Altera cursor */
   cursor: pointer;
+  /* Peso da fonte */
   font-weight: bold;
 }
 
 .btn:hover {
+  /* Altera cor de fundo ao passar o mouse */
   background-color: #3a5233;
 }
 
 .btn-destaque {
+  /* Cor de fundo */
   background-color: #d4af37;
+  /* Cor do texto */
   color: #333;
+  /* Preenchimento */
   padding: 10px 20px;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Transição suave para cor de fundo */
   transition: background-color 0.3s;
 }
 
 .btn-destaque:hover {
+  /* Altera cor de fundo ao passar o mouse */
   background-color: #c4a030;
 }
 
 .section-title {
+  /* Centraliza texto */
   text-align: center;
+  /* Margem inferior */
   margin-bottom: 40px;
+  /* Cor do texto */
   color: #4a6741;
+  /* Tamanho da fonte */
   font-size: 2rem;
+  /* Posição relativa para elementos filhos */
   position: relative;
+  /* Preenchimento inferior */
   padding-bottom: 15px;
 }
 
 .section-title::after {
+  /* Cria uma linha decorativa */
   content: "";
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha na parte inferior */
   bottom: 0;
+  /* Alinha no centro horizontalmente */
   left: 50%;
+  /* Centraliza usando transformação */
   transform: translateX(-50%);
+  /* Largura da linha */
   width: 80px;
+  /* Altura da linha */
   height: 3px;
+  /* Cor de fundo da linha */
   background-color: #d4af37;
 }
 
 .center {
+  /* Centraliza texto */
   text-align: center;
+  /* Margem superior e inferior */
   margin: 30px 0;
 }
 
 /* Header */
 header {
+  /* Cor de fundo */
   background-color: white;
+  /* Sombra */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Fixa no topo ao rolar */
   position: sticky;
+  /* Alinha no topo */
   top: 0;
+  /* Ordem de empilhamento */
   z-index: 1000;
 }
 
 header .container {
+  /* Layout flexível */
   display: flex;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Preenchimento */
   padding: 15px;
 }
 
 .logo img {
+  /* Tamanho da fonte (não aplicável a imagem) */
   font-size: 1.8rem;
+  /* Altura da imagem */
   height: 100px;
 }
 
 nav ul {
+  /* Layout flexível */
   display: flex;
+  /* Remove marcadores de lista */
   list-style: none;
 }
 
 nav ul li {
+  /* Margem à esquerda */
   margin-left: 20px;
 }
 
 nav ul li a {
+  /* Cor do texto */
   color: #333;
+  /* Peso da fonte */
   font-weight: 500;
+  /* Preenchimento */
   padding: 5px 10px;
+  /* Transição de cor */
   transition: color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
+  /* Altera cor ao passar o mouse ou quando ativo */
   color: #4a6741;
 }
 
 .menu-mobile {
+  /* Oculta o elemento */
   display: none;
+  /* Tamanho da fonte */
   font-size: 1.5rem;
+  /* Altera cursor */
   cursor: pointer;
 }
 
 /* Banner */
 .banner {
+  /* Imagem de fundo com gradiente */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/TCC 2/TCC/imagens/banner-menu.jpg");
+  /* Ajusta tamanho da imagem de fundo */
   background-size: cover;
+  /* Centraliza imagem de fundo */
   background-position: center;
+  /* Cor do texto */
   color: white;
+  /* Centraliza texto */
   text-align: center;
+  /* Preenchimento superior e inferior */
   padding: 100px 0;
 }
 
 .banner-content {
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
 }
 
 .banner h2 {
+  /* Tamanho da fonte */
   font-size: 2.5rem;
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .banner p {
+  /* Tamanho da fonte */
   font-size: 1.2rem;
+  /* Margem inferior */
   margin-bottom: 30px;
 }
 
 /* Seção de Destaques */
 .destaques {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
+  /* Cor de fundo */
   background-color: white;
 }
 
 .cards {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre cards */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 30px;
 }
 
 .card {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 250px;
+  /* Cor de fundo */
   background-color: #f9f9f9;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Oculta conteúdo excedente */
   overflow: hidden;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Transição de transformação */
   transition: transform 0.3s;
 }
 
 .card:hover {
+  /* Move para cima ao passar o mouse */
   transform: translateY(-10px);
 }
 
 .card img {
+  /* Largura total */
   width: 100%;
+  /* Altura */
   height: 200px;
+  /* Ajusta imagem para cobrir */
   object-fit: cover;
 }
 
 .card h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Preenchimento */
   padding: 20px 20px 10px;
 }
 
 .card p {
+  /* Preenchimento */
   padding: 0 20px 20px;
 }
 
 /* Seção Sobre */
 .sobre-home {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
+  /* Cor de fundo */
   background-color: #f9f9f9;
 }
 
 .sobre-content {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Espaçamento entre itens */
   gap: 40px;
 }
 
 .sobre-text {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 300px;
 }
 
 .sobre-text p {
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .sobre-image {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 300px;
 }
 
 .sobre-image img {
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu Preview */
 .menu-preview {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
+  /* Cor de fundo */
   background-color: white;
 }
 
 .menu-items {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 20px;
 }
 
 .menu-item {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 200px;
+  /* Centraliza texto */
   text-align: center;
+  /* Preenchimento */
   padding: 20px;
+  /* Cor de fundo */
   background-color: #f9f9f9;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item img {
+  /* Largura total */
   width: 100%;
+  /* Altura */
   height: 150px;
+  /* Ajusta imagem para cobrir */
   object-fit: cover;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .menu-item h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 10px;
 }
 
 /* Depoimentos */
 .depoimentos {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
+  /* Cor de fundo */
   background-color: #f9f9f9;
 }
 
 .depoimentos-slider {
+  /* Posição relativa para elementos filhos */
   position: relative;
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
 }
 
 .depoimento {
+  /* Cor de fundo */
   background-color: white;
+  /* Preenchimento */
   padding: 30px;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Margem horizontal */
   margin: 0 20px;
 }
 
 .depoimento p {
+  /* Estilo da fonte */
   font-style: italic;
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .cliente h4 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 5px;
 }
 
 .slider-controls {
+  /* Centraliza texto */
   text-align: center;
+  /* Margem superior */
   margin-top: 30px;
 }
 
 .prev,
 .next {
+  /* Exibe como bloco em linha */
   display: inline-block;
+  /* Cor de fundo */
   background-color: #4a6741;
+  /* Cor do texto */
   color: white;
+  /* Largura */
   width: 40px;
+  /* Altura */
   height: 40px;
+  /* Alinha texto verticalmente */
   line-height: 40px;
+  /* Centraliza texto */
   text-align: center;
+  /* Borda arredondada (círculo) */
   border-radius: 50%;
+  /* Margem horizontal */
   margin: 0 10px;
+  /* Altera cursor */
   cursor: pointer;
 }
 
 /* Contato Rápido */
 .contato-rapido {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
+  /* Cor de fundo */
   background-color: white;
 }
 
 .contato-content {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaçamento entre itens */
   gap: 40px;
 }
 
 .contato-info,
 .contato-form {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 300px;
 }
 
 .info-item {
+  /* Layout flexível */
   display: flex;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .icon {
+  /* Tamanho da fonte */
   font-size: 1.5rem;
+  /* Margem à direita */
   margin-right: 15px;
+  /* Cor do ícone */
   color: #4a6741;
 }
 
 .social-media {
+  /* Margem superior */
   margin-top: 20px;
 }
 
 .social-icon {
+  /* Margem à direita */
   margin-right: 15px;
+  /* Cor do ícone */
   color: #4a6741;
 }
 
 .form-group {
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 label {
+  /* Exibe como bloco */
   display: block;
+  /* Margem inferior */
   margin-bottom: 5px;
+  /* Peso da fonte */
   font-weight: 500;
 }
 
 input,
 textarea {
+  /* Largura total */
   width: 100%;
+  /* Preenchimento */
   padding: 10px;
+  /* Borda */
   border: 1px solid #ddd;
+  /* Borda arredondada */
   border-radius: 5px;
 }
 
 /* Footer */
 footer {
+  /* Cor de fundo */
   background-color: #333;
+  /* Cor do texto */
   color: white;
+  /* Preenchimento */
   padding: 60px 0 20px;
 }
 
 .footer-content {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 30px;
+  /* Margem inferior */
   margin-bottom: 40px;
 }
 
 .social-icon {
+  /* Layout flexível */
   display: flex;
+  /* Organiza em coluna */
   flex-direction: column;
 }
 
@@ -402,654 +601,993 @@ footer {
 .footer-links,
 .footer-contact,
 .footer-social {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 200px;
 }
 
 .footer-logo h2 {
+  /* Cor do texto */
   color: #d4af37;
+  /* Margem inferior */
   margin-bottom: 10px;
 }
 
 .footer-links h3,
 .footer-contact h3,
 .footer-social h3 {
+  /* Cor do texto */
   color: #d4af37;
+  /* Margem inferior */
   margin-bottom: 15px;
+  /* Tamanho da fonte */
   font-size: 1.2rem;
 }
 
 .footer-links ul {
+  /* Remove marcadores de lista */
   list-style: none;
 }
 
 .footer-links ul li {
+  /* Margem inferior */
   margin-bottom: 10px;
 }
 
 .footer-links ul li a {
+  /* Cor do texto */
   color: white;
+  /* Transição de cor */
   transition: color 0.3s;
 }
 
 .footer-links ul li a:hover {
+  /* Altera cor ao passar o mouse */
   color: #d4af37;
 }
 
 .footer-contact p {
+  /* Margem inferior */
   margin-bottom: 10px;
 }
 
 .footer-social .social-icons {
+  /* Layout flexível */
   display: flex;
+  /* Espaçamento entre ícones */
   gap: 15px;
 }
 
 .footer-social .social-icon {
+  /* Cor do ícone */
   color: white;
 }
 
 .footer-bottom {
+  /* Centraliza texto */
   text-align: center;
+  /* Preenchimento superior */
   padding-top: 20px;
+  /* Borda superior */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-social .social-icons a {
+  /* Layout flexível */
   display: flex;
-  flex-direction: row; /* Garante lado a lado */
-  align-items: center; /* Centraliza verticalmente */
+  /* Organiza em linha */
+  flex-direction: row;
+  /* Alinha itens verticalmente */
+  align-items: center;
+  /* Cor do texto */
   color: #fff;
+  /* Peso da fonte */
   font-weight: 500;
+  /* Transição de cor */
   transition: color 0.3s;
+  /* Opacidade */
   opacity: 1;
 }
 
 .footer-social .social-icons a i {
-  margin-right: 12px; /* Espaço entre ícone e texto */
-  line-height: 1; /* Alinha melhor com o texto */
+  /* Margem à direita */
+  margin-right: 12px;
+  /* Alinha com o texto */
+  line-height: 1;
 }
 
 .footer-social .social-icons a:hover {
+  /* Altera cor ao passar o mouse */
   color: #d4af37;
 }
 
 /* Página de Menu */
 .menu-page {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
 }
 
 .menu-categories {
+  /* Layout flexível */
   display: flex;
+  /* Centraliza horizontalmente */
   justify-content: center;
+  /* Margem inferior */
   margin-bottom: 40px;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaçamento entre itens */
   gap: 10px;
 }
 
 .category-btn {
+  /* Preenchimento */
   padding: 8px 15px;
+  /* Cor de fundo */
   background-color: #f1f1f1;
+  /* Remove borda */
   border: none;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Altera cursor */
   cursor: pointer;
+  /* Transição de todas as propriedades */
   transition: all 0.3s;
 }
 
 .category-btn.active,
 .category-btn:hover {
+  /* Altera cor de fundo */
   background-color: #4a6741;
+  /* Altera cor do texto */
   color: white;
 }
 
 .menu-list {
+  /* Largura máxima */
   max-width: 900px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
 }
 
 .menu-category {
+  /* Margem inferior */
   margin-bottom: 50px;
 }
 
 .menu-category h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Tamanho da fonte */
   font-size: 1.5rem;
+  /* Margem inferior */
   margin-bottom: 20px;
+  /* Preenchimento inferior */
   padding-bottom: 10px;
+  /* Borda inferior */
   border-bottom: 2px solid #d4af37;
 }
 
 .menu-category-items {
+  /* Layout de grid */
   display: grid;
+  /* Colunas responsivas */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* Espaçamento entre itens */
   gap: 30px;
 }
 
 .menu-category-item {
+  /* Cor de fundo */
   background-color: white;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Oculta conteúdo excedente */
   overflow: hidden;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Transição de transformação */
   transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .menu-category-item img {
+  /* Largura total */
   width: 100%;
+  /* Altura */
   height: 180px;
+  /* Ajusta imagem para cobrir */
   object-fit: cover;
 }
 
 .menu-category-item:hover {
+  /* Aumenta tamanho ao passar o mouse */
   transform: scale(1.05);
+  /* Transição de transformação */
   transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  /* Ordem de empilhamento */
   z-index: 2;
+  /* Sombra mais proeminente */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .menu-item-info {
+  /* Preenchimento */
   padding: 15px;
 }
 
 .menu-item-info h4 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 5px;
 }
 
 .menu-item-info .price {
+  /* Cor do texto */
   color: #d4af37;
+  /* Peso da fonte */
   font-weight: bold;
+  /* Margem superior */
   margin-top: 10px;
 }
 
 /* Página Sobre */
 .sobre-page {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
 }
 
 .sobre-hero {
+  /* Centraliza texto */
   text-align: center;
+  /* Margem inferior */
   margin-bottom: 60px;
 }
 
 .sobre-hero h2 {
+  /* Tamanho da fonte */
   font-size: 2.5rem;
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .sobre-hero p {
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
+  /* Tamanho da fonte */
   font-size: 1.1rem;
 }
 
 .historia {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Espaçamento entre itens */
   gap: 40px;
+  /* Margem inferior */
   margin-bottom: 80px;
 }
 
 .historia-text,
 .historia-image {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 300px;
 }
 
 .historia-text h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Tamanho da fonte */
   font-size: 1.8rem;
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .historia-image img {
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .valores {
+  /* Cor de fundo */
   background-color: #f9f9f9;
+  /* Preenchimento superior e inferior */
   padding: 60px 0;
+  /* Margem inferior */
   margin-bottom: 65px;
 }
 
 .valores-content {
+  /* Largura máxima */
   max-width: 900px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
 }
 
 .valores-list {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 30px;
 }
 
 .valor {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 250px;
+  /* Centraliza texto */
   text-align: center;
+  /* Preenchimento */
   padding: 30px;
+  /* Cor de fundo */
   background-color: white;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .valor-icon {
+  /* Tamanho da fonte */
   font-size: 2.5rem;
+  /* Cor do ícone */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .valor h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .equipe {
+  /* Margem inferior */
   margin-bottom: 80px;
 }
 
 .equipe-members {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 30px;
 }
 
 .equipe-member {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 250px;
+  /* Centraliza texto */
   text-align: center;
 }
 
 .equipe-member img {
+  /* Largura */
   width: 200px;
+  /* Altura */
   height: 200px;
+  /* Ajusta imagem para cobrir */
   object-fit: cover;
+  /* Borda arredondada (círculo) */
   border-radius: 50%;
+  /* Centraliza e margem inferior */
   margin: 0 auto 20px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .equipe-member h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 5px;
 }
 
 .equipe-member p {
+  /* Cor do texto */
   color: #666;
+  /* Margem inferior */
   margin-bottom: 10px;
 }
 
 /* Página de Galeria */
 .galeria-page {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
 }
 
 .galeria-filters {
+  /* Layout flexível */
   display: flex;
+  /* Centraliza horizontalmente */
   justify-content: center;
+  /* Margem inferior */
   margin-bottom: 40px;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaçamento entre itens */
   gap: 10px;
 }
 
 .filter-btn {
+  /* Preenchimento */
   padding: 8px 15px;
+  /* Cor de fundo */
   background-color: #f1f1f1;
+  /* Remove borda */
   border: none;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Altera cursor */
   cursor: pointer;
+  /* Transição de todas as propriedades */
   transition: all 0.3s;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
+  /* Altera cor de fundo */
   background-color: #4a6741;
+  /* Altera cor do texto */
   color: white;
 }
 
 .galeria-grid {
+  /* Layout de grid */
   display: grid;
+  /* Colunas responsivas */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* Espaçamento entre itens */
   gap: 20px;
 }
 
 .galeria-item {
+  /* Posição relativa para elementos filhos */
   position: relative;
+  /* Oculta conteúdo excedente */
   overflow: hidden;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Altera cursor */
   cursor: pointer;
 }
 
 .galeria-item img {
+  /* Largura total */
   width: 100%;
+  /* Altura */
   height: 250px;
+  /* Ajusta imagem para cobrir */
   object-fit: cover;
+  /* Transição de transformação */
   transition: transform 0.3s;
 }
 
 .galeria-item:hover img {
+  /* Aumenta tamanho ao passar o mouse */
   transform: scale(1.05);
 }
 
 .galeria-item-overlay {
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha na parte inferior */
   bottom: 0;
+  /* Alinha na esquerda */
   left: 0;
+  /* Alinha na direita */
   right: 0;
+  /* Cor de fundo com transparência */
   background-color: rgba(0, 0, 0, 0.7);
+  /* Cor do texto */
   color: white;
+  /* Preenchimento */
   padding: 15px;
+  /* Move para fora da visualização */
   transform: translateY(100%);
+  /* Transição de transformação */
   transition: transform 0.3s;
 }
 
 .galeria-item:hover .galeria-item-overlay {
+  /* Move para dentro da visualização ao passar o mouse */
   transform: translateY(0);
 }
 
 .galeria-item-overlay h3 {
+  /* Margem inferior */
   margin-bottom: 5px;
 }
 
 /* Modal de Galeria */
 .galeria-modal {
+  /* Oculta o elemento */
   display: none;
+  /* Posição fixa na tela */
   position: fixed;
+  /* Alinha no topo */
   top: 0;
+  /* Alinha na esquerda */
   left: 0;
+  /* Largura total */
   width: 100%;
+  /* Altura total */
   height: 100%;
+  /* Cor de fundo com transparência */
   background-color: rgba(0, 0, 0, 0.9);
+  /* Ordem de empilhamento */
   z-index: 1100;
+  /* Preenchimento */
   padding: 50px;
+  /* Adiciona rolagem se o conteúdo exceder */
   overflow: auto;
 }
 
 .modal-content {
+  /* Posição relativa para elementos filhos */
   position: relative;
+  /* Largura máxima */
   max-width: 900px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
 }
 
 .modal-image {
+  /* Largura total */
   width: 100%;
+  /* Altura máxima */
   max-height: 80vh;
+  /* Ajusta imagem para caber */
   object-fit: contain;
 }
 
 .modal-close {
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha no topo (fora do modal) */
   top: -40px;
+  /* Alinha na direita */
   right: 0;
+  /* Cor do texto */
   color: white;
+  /* Tamanho da fonte */
   font-size: 2rem;
+  /* Altera cursor */
   cursor: pointer;
 }
 
 .modal-caption {
+  /* Cor do texto */
   color: white;
+  /* Centraliza texto */
   text-align: center;
+  /* Margem superior */
   margin-top: 20px;
 }
 
 .modal-prev,
 .modal-next {
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha no centro verticalmente */
   top: 50%;
+  /* Centraliza verticalmente */
   transform: translateY(-50%);
+  /* Cor do texto */
   color: white;
+  /* Tamanho da fonte */
   font-size: 2rem;
+  /* Altera cursor */
   cursor: pointer;
+  /* Cor de fundo com transparência */
   background-color: rgba(0, 0, 0, 0.5);
+  /* Largura */
   width: 50px;
+  /* Altura */
   height: 50px;
+  /* Alinha texto verticalmente */
   line-height: 50px;
+  /* Centraliza texto */
   text-align: center;
+  /* Borda arredondada (círculo) */
   border-radius: 50%;
 }
 
 .modal-prev {
+  /* Alinha à esquerda (fora do modal) */
   left: -70px;
 }
 
 .modal-next {
+  /* Alinha à direita (fora do modal) */
   right: -70px;
 }
 
 /* Página de Contato */
 .contato-page {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
 }
 
 .contato-info-section {
+  /* Margem inferior */
   margin-bottom: 60px;
 }
 
 .contato-info-content {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaço entre itens */
   justify-content: space-between;
+  /* Espaçamento entre itens */
   gap: 30px;
 }
 
 .contato-info-item {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 250px;
+  /* Centraliza texto */
   text-align: center;
+  /* Preenchimento */
   padding: 30px;
+  /* Cor de fundo */
   background-color: white;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contato-info-icon {
+  /* Tamanho da fonte */
   font-size: 2.5rem;
+  /* Cor do ícone */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .contato-info-item h3 {
+  /* Cor do texto */
   color: #4a6741;
+  /* Margem inferior */
   margin-bottom: 15px;
 }
 
 .contato-form-section {
+  /* Cor de fundo */
   background-color: #f9f9f9;
+  /* Preenchimento superior e inferior */
   padding: 60px 0;
 }
 
 .contato-form-content {
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
+  /* Cor de fundo */
   background-color: white;
+  /* Preenchimento */
   padding: 40px;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
+  /* Layout flexível */
   display: flex;
+  /* Permite quebra de linha */
   flex-wrap: wrap;
+  /* Espaçamento entre itens */
   gap: 20px;
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .form-group {
+  /* Permite crescimento e encolhimento */
   flex: 1;
+  /* Largura mínima */
   min-width: 250px;
 }
 
 .mapa-section {
+  /* Preenchimento superior e inferior */
   padding: 60px 0;
 }
 
 .mapa-container {
+  /* Altura */
   height: 400px;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Oculta conteúdo excedente */
   overflow: hidden;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Página de Reservas */
 .reservas-page {
+  /* Preenchimento superior e inferior */
   padding: 80px 0;
 }
 
 .reservas-info {
+  /* Centraliza texto */
   text-align: center;
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza e margem inferior */
   margin: 0 auto 60px;
 }
 
 .reservas-info p {
+  /* Margem inferior */
   margin-bottom: 20px;
 }
 
 .reservas-form-container {
+  /* Largura máxima */
   max-width: 800px;
+  /* Centraliza horizontalmente */
   margin: 0 auto;
+  /* Cor de fundo */
   background-color: white;
+  /* Preenchimento */
   padding: 40px;
+  /* Borda arredondada */
   border-radius: 10px;
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .reservas-form-steps {
+  /* Layout flexível */
   display: flex;
+  /* Espaço entre passos */
   justify-content: space-between;
+  /* Margem inferior */
   margin-bottom: 40px;
+  /* Posição relativa para elementos filhos */
   position: relative;
 }
 
 .reservas-form-steps::before {
+  /* Cria linha de progresso */
   content: "";
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha no topo */
   top: 15px;
+  /* Alinha na esquerda */
   left: 0;
+  /* Alinha na direita */
   right: 0;
+  /* Altura da linha */
   height: 2px;
+  /* Cor de fundo da linha */
   background-color: #ddd;
+  /* Ordem de empilhamento */
   z-index: 1;
 }
 
 .step {
+  /* Posição relativa */
   position: relative;
+  /* Ordem de empilhamento */
   z-index: 2;
+  /* Cor de fundo */
   background-color: white;
+  /* Largura */
   width: 30px;
+  /* Altura */
   height: 30px;
+  /* Borda arredondada (círculo) */
   border-radius: 50%;
+  /* Borda */
   border: 2px solid #ddd;
+  /* Layout flexível */
   display: flex;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Centraliza itens horizontalmente */
   justify-content: center;
+  /* Peso da fonte */
   font-weight: bold;
 }
 
 .step.active {
+  /* Cor da borda */
   border-color: #4a6741;
+  /* Cor de fundo */
   background-color: #4a6741;
+  /* Cor do texto */
   color: white;
 }
 
 .step-label {
+  /* Posição absoluta */
   position: absolute;
+  /* Alinha no topo */
   top: 35px;
+  /* Alinha no centro horizontalmente */
   left: 50%;
+  /* Centraliza usando transformação */
   transform: translateX(-50%);
+  /* Impede quebra de linha */
   white-space: nowrap;
+  /* Tamanho da fonte */
   font-size: 0.9rem;
 }
 
 .form-step {
+  /* Oculta o elemento */
   display: none;
 }
 
 .form-step.active {
+  /* Exibe o elemento */
   display: block;
 }
 
 .form-navigation {
+  /* Layout flexível */
   display: flex;
+  /* Espaço entre botões */
   justify-content: space-between;
+  /* Margem superior */
   margin-top: 30px;
 }
 
 select {
+  /* Largura total */
   width: 100%;
+  /* Preenchimento */
   padding: 10px;
+  /* Borda */
   border: 1px solid #ddd;
+  /* Borda arredondada */
   border-radius: 5px;
+  /* Tamanho da fonte */
   font-size: 1rem;
+  /* Cor de fundo */
   background-color: #fff;
+  /* Cor do texto */
   color: #333;
+  /* Remove estilo padrão do sistema */
   appearance: none;
-  /* Remove o estilo padrão do sistema */
+  /* Remove estilo padrão (WebKit) */
   -webkit-appearance: none;
+  /* Remove estilo padrão (Mozilla) */
   -moz-appearance: none;
 }
 
 .checkbox-group {
+  /* Layout flexível */
   display: flex;
+  /* Organiza em coluna */
   flex-direction: column;
-  /* Deixa os itens em coluna (vertical) */
+  /* Espaçamento entre itens */
   gap: 12px;
+  /* Margem superior */
   margin-top: 10px;
+  /* Alinha à esquerda */
   align-items: flex-start;
-  /* garante alinhamento à esquerda */
 }
 
 .checkbox-group label {
+  /* Layout flexível */
   display: flex;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Espaçamento entre itens */
   gap: 8px;
+  /* Peso da fonte */
   font-weight: 400;
+  /* Remove margem inferior */
   margin-bottom: 0;
+  /* Altera cursor */
   cursor: pointer;
+  /* Largura máxima */
   max-width: 250px;
-  /* Limita a largura do label */
+  /* Impede quebra de linha */
   white-space: nowrap;
 }
 
 .inline-checkbox {
+  /* Layout flexível */
   display: flex;
+  /* Alinha itens verticalmente */
   align-items: center;
+  /* Espaçamento entre itens */
   gap: 10px;
+  /* Peso da fonte */
   font-weight: 400;
+  /* Remove margem inferior */
   margin-bottom: 0;
+  /* Altera cursor */
   cursor: pointer;
+  /* Permite quebra de linha */
   white-space: normal;
 }
 input[type="checkbox"] {
+  /* Largura */
   width: 18px;
+  /* Altura */
   height: 18px;
+  /* Remove margens */
   margin: 0;
+  /* Cor de destaque */
   accent-color: #4a6741;
 }
 
 .mensagem-sucesso {
+  /* Cor de fundo */
   background: #e6fbe6;
+  /* Borda */
   border: 1.5px solid #4a6741;
+  /* Cor do texto */
   color: #2e4d2e;
+  /* Preenchimento */
   padding: 32px 20px;
+  /* Borda arredondada */
   border-radius: 8px;
+  /* Centraliza texto */
   text-align: center;
+  /* Margem inferior */
   margin-bottom: 30px;
+  /* Tamanho da fonte */
   font-size: 1.15rem;
+  /* Aplica animação */
   animation: fadeIn 0.7s;
 }
 @keyframes fadeIn {
+  /* Início da animação */
   from {
+    /* Opacidade inicial */
     opacity: 0;
+    /* Posição inicial */
     transform: translateY(30px);
   }
+  /* Fim da animação */
   to {
+    /* Opacidade final */
     opacity: 1;
+    /* Posição final */
     transform: translateY(0);
   }
 }
@@ -1057,83 +1595,11 @@ input[type="checkbox"] {
 /* Responsividade */
 @media (max-width: 768px) {
   nav ul {
+    /* Oculta o elemento */
     display: none;
+    /* Posição absoluta */
     position: absolute;
+    /* Alinha no topo */
     top: 100px;
-    left: 0;
-    right: 0;
-    background-color: white;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .menu-mobile {
-    display: block;
-  }
-
-  .banner h2 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .modal-prev,
-  .modal-next {
-    position: static;
-    transform: none;
-    margin: 20px;
-    display: inline-block;
-  }
-}
-
-@media (max-width: 576px) {
-  .banner {
-    padding: 60px 0;
-  }
-
-  .banner h2 {
-    font-size: 1.5rem;
-  }
-
-  .banner p {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .destaques,
-  .sobre-home,
-  .menu-preview,
-  .depoimentos,
-  .contato-rapido {
-    padding: 50px 0;
-  }
-
-  .depoimento {
-    margin: 0 0px;
-  }
-
-  .card,
-  .menu-item,
-  .depoimento {
-    min-width: 100%;
-  }
-
-  .footer-content > div {
-    min-width: 100%;
-    margin-bottom: 30px;
   }
 }
