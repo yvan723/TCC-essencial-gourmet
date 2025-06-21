@@ -1592,9 +1592,6 @@ input[type="checkbox"] {
   }
 }
 
-Com certeza! Vou comentar cada linha do código CSS que você forneceu, explicando o que cada uma faz.
-
-```css
 /* Responsividade */
 /* Início da media query: aplica estilos quando a largura da tela é no máximo 768px (para tablets e celulares) */
 @media (max-width: 768px) {
