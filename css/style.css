@@ -1592,14 +1592,134 @@ input[type="checkbox"] {
   }
 }
 
+Com certeza! Vou comentar cada linha do código CSS que você forneceu, explicando o que cada uma faz.
+
+```css
 /* Responsividade */
+/* Início da media query: aplica estilos quando a largura da tela é no máximo 768px (para tablets e celulares) */
 @media (max-width: 768px) {
+  /* Seleciona a lista não ordenada dentro da tag <nav> */
   nav ul {
-    /* Oculta o elemento */
+    /* Oculta o menu por padrão em telas menores */
     display: none;
-    /* Posição absoluta */
+    /* Define a posição do menu como absoluta em relação ao seu ancestral posicionado (neste caso, o <body> ou o <header> se ele tiver position: relative/absolute/fixed) */
     position: absolute;
-    /* Alinha no topo */
+    /* Posiciona o menu 100px abaixo do topo da viewport (ou do elemento pai posicionado) */
     top: 100px;
+    /* Alinha o menu à esquerda da viewport */
+    left: 0;
+    /* Alinha o menu à direita da viewport, fazendo com que ele ocupe 100% da largura */
+    right: 0;
+    /* Define a cor de fundo do menu quando ele estiver aberto */
+    background-color: white;
+    /* Define o layout dos itens do menu como flexível */
+    flex-direction: column;
+    /* Organiza os itens do menu em uma coluna (um abaixo do outro) */
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px em todos os lados do menu */
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do menu: 0px horizontal, 3px vertical, 1px blur, cor preta com 10% de opacidade */
+  }
+
+  /* Seleciona a lista não ordenada dentro da tag <nav> QUANDO ela também tem a classe 'show' */
+  nav ul.show {
+    /* Exibe o menu como um container flexível (sobrescrevendo o 'display: none;' acima) */
+    display: flex;
+  }
+
+  /* Seleciona cada item de lista (<li>) dentro da lista de navegação */
+  nav ul li {
+    /* Adiciona uma margem de 10px acima e abaixo de cada item do menu, e 0px nas laterais */
+    margin: 10px 0;
+  }
+
+  /* Seleciona o elemento com a classe 'menu-mobile' (o ícone do hambúrguer) */
+  .menu-mobile {
+    /* Exibe o ícone do hambúrguer, que estava oculto por padrão em telas maiores */
+    display: block;
+  }
+
+  /* Seleciona o título <h2> dentro do banner */
+  .banner h2 {
+    /* Reduz o tamanho da fonte do título do banner para 2rem (em relação ao tamanho da fonte base) */
+    font-size: 2rem;
+  }
+
+  /* Seleciona o título de seção */
+  .section-title {
+    /* Reduz o tamanho da fonte dos títulos de seção para 1.8rem */
+    font-size: 1.8rem;
+  }
+
+  /* Seleciona os botões de navegação 'anterior' e 'próximo' do modal da galeria */
+  .modal-prev,
+  .modal-next {
+    /* Define a posição como estática, removendo o posicionamento absoluto anterior */
+    position: static;
+    /* Remove qualquer transformação (como translateY) aplicada anteriormente */
+    transform: none;
+    /* Adiciona uma margem de 20px em todos os lados */
+    margin: 20px;
+    /* Exibe os botões como elementos de bloco em linha, permitindo que fiquem lado a lado */
+    display: inline-block;
+  }
+}
+
+/* Início da segunda media query: aplica estilos quando a largura da tela é no máximo 576px (para celulares menores) */
+@media (max-width: 576px) {
+  /* Seleciona a seção do banner */
+  .banner {
+    /* Reduz o preenchimento superior e inferior do banner para 60px */
+    padding: 60px 0;
+  }
+
+  /* Seleciona o título <h2> dentro do banner */
+  .banner h2 {
+    /* Reduz ainda mais o tamanho da fonte do título do banner para 1.5rem */
+    font-size: 1.5rem;
+  }
+
+  /* Seleciona o parágrafo <p> dentro do banner */
+  .banner p {
+    /* Reduz o tamanho da fonte do parágrafo do banner para 1rem */
+    font-size: 1rem;
+  }
+
+  /* Seleciona o título de seção */
+  .section-title {
+    /* Reduz o tamanho da fonte dos títulos de seção para 1.5rem */
+    font-size: 1.5rem;
+  }
+
+  /* Seleciona várias seções do site */
+  .destaques,
+  .sobre-home,
+  .menu-preview,
+  .depoimentos,
+  .contato-rapido {
+    /* Reduz o preenchimento superior e inferior dessas seções para 50px */
+    padding: 50px 0;
+  }
+
+  /* Seleciona o elemento de depoimento */
+  .depoimento {
+    /* Remove as margens laterais do depoimento, fazendo com que ele ocupe a largura total */
+    margin: 0 0px;
+  }
+
+  /* Seleciona os elementos de card, item de menu e depoimento */
+  .card,
+  .menu-item,
+  .depoimento {
+    /* Define a largura mínima desses elementos como 100%, garantindo que ocupem toda a largura disponível */
+    min-width: 100%;
+  }
+
+  /* Seleciona as divs filhas diretas do elemento com a classe 'footer-content' */
+  .footer-content > div {
+    /* Define a largura mínima dessas divs como 100%, fazendo com que cada uma ocupe uma linha no rodapé */
+    min-width: 100%;
+    /* Adiciona uma margem inferior de 30px a cada uma dessas divs */
+    margin-bottom: 30px;
   }
 }
